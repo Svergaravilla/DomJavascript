@@ -12,7 +12,7 @@ botton.addEventListener("click", function (e) {
   let asunto = document.getElementById("asunto").value;
   let mensaje = document.getElementById("mensaje").value;
 
-  let formulario_listo;
+  let formulario_listo = true
   if (!validacion(nombre)) {
 
     document.querySelector(".errorNombre").innerHTML = "El nombre es requerido";
@@ -28,6 +28,11 @@ botton.addEventListener("click", function (e) {
   if (!validacion(mensaje)) {
     document.querySelector(".errorMensaje").innerHTML = "El mensaje es requerido";
   formulario_listo = false;
+
+  }
+
+  if (formulario_listo){
+      document.querySelector(".resultado").innerHTML = "Mensaje enviado con exito!!!";
 
   }
 });
